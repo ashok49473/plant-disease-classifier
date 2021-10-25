@@ -18,8 +18,8 @@ def home():
         input_img = secure_filename(file.filename)
         file.save(app.config['IMAGE_UPLOADS']+input_img)
 
-        predict_save(input_img)
-        return render_template('home.html', input_img=input_img, pred_img='pred_img.png')
+        pred=predict_save(input_img)
+        return render_template('home.html', pred=pred, input_img=input_img, pred_img='pred_img.png')
     return render_template('home.html')
 
 
@@ -30,6 +30,7 @@ def about():
 ##############################################
 model = load_model(app.config['MODEL'])
 class_names = ['Early_blight', 'Healthy', 'Late_blight']
+
 def predict_save(img):
     my_image = load_img(app.config['IMAGE_UPLOADS']+img, target_size=(128, 128))
     my_image = img_to_array(my_image)
@@ -55,3 +56,5 @@ def predict_save(img):
     plt.yticks([0, 1, 2], labels=class_names, fontweight='bold', fontsize=14)
     name = app.config['IMAGE_UPLOADS']+'pred_img.png'
     fig.savefig(name, bbox_inches='tight')
+    
+    return class_names[np.argmax(out)]
