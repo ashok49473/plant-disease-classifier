@@ -6,6 +6,18 @@
 ### 4. Enter `pip install -r requirements.txt`
 ### 5. Enter `python app.py`
 
+# Tools✅
+**Python 3.7** <br>
+**Flask**<br>
+**Tensorflow 2.6**<br>
+**Numpy**<br>
+**Matplotlib**<br>
+**HTML**<br>
+**CSS**<br>
+**Bootstrap**<br>
+**IDE: VScode**<br>
+
+# Tour!🎯
 #### Home page
 ![home](https://github.com/ashok49473/potato-disease-classifier/blob/master/images-md/home.png)
 
