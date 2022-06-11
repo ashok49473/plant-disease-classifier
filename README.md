@@ -1,8 +1,8 @@
-# Title - Potato Disease Classifier
+# Title - Plant Disease Classifier
 # Run 🎯
 ### 1. Download or clone the repository
 ### 2. Open cmd or terminal
-### 3. change directory (cd) to `potato-disease-classifier`
+### 3. change directory (cd) to `plant-disease-classifier`
 ### 4. Enter `pip install -r requirements.txt`
 ### 5. Enter `python app.py`
 
